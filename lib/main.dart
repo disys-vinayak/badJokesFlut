@@ -10,8 +10,9 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
             child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("Vinayak App")
+            Text("Vinayak's App")
           ], // children
         ) // Column
             ), // Center
