@@ -12,20 +12,23 @@ class MyApp extends StatelessWidget {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "What do you call a pencil with eraser on both ends?",
-              style: TextStyle(
-                fontSize: 27.5,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            Text(
+            Container(
+                margin: EdgeInsets.all(25),
+                child: Text(
+                  "What do you call a pencil with eraser on both ends?",
+                  style: TextStyle(
+                    fontSize: 27.5,
+                  ),
+                  textAlign: TextAlign.center,
+                )),
+            Container(
+                child: Text(
               "Pointless",
               style: TextStyle(
                 fontSize: 22.5,
               ),
               textAlign: TextAlign.center,
-            ),
+            )),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               FloatingActionButton(
                 onPressed: null,
