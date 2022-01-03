@@ -8,8 +8,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(),
-      ),
-    );
+        body: Center(
+            child: Column(
+          children: <Widget>[
+            Text("Vinayak's App")
+          ], // children
+        ) // Column
+            ), // Center
+      ), // Scaffold
+    ); // Material App
   }
 }
