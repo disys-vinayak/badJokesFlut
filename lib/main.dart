@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
                   "What do you call a pencil with eraser on both ends?",
                   style: TextStyle(
                     fontSize: 27.5,
+                    fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.center,
                 )),
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
               "Pointless",
               style: TextStyle(
                 fontSize: 22.5,
+                fontWeight: FontWeight.normal,
               ),
               textAlign: TextAlign.center,
             )),
