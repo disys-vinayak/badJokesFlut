@@ -8,8 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(),
-        floatingActionButton: FloatingActionButton(onPressed: ,),
+        body: Center(),
       ),
     );
   }
