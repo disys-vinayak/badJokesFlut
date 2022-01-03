@@ -19,7 +19,13 @@ class MyApp extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            Text("Pointless"),
+            Text(
+              "Pointless",
+              style: TextStyle(
+                fontSize: 27.5,
+              ),
+              textAlign: TextAlign.center,
+            ),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               FloatingActionButton(onPressed: null, child: Icon(Icons.arrow_left)),
               FloatingActionButton(onPressed: null, child: Icon(Icons.arrow_right))
