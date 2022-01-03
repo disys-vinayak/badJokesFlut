@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
         body: Center(
             child: Column(
           children: <Widget>[
-            Text("Vinayak's App")
+            Text("Vinayak App")
           ], // children
         ) // Column
             ), // Center
