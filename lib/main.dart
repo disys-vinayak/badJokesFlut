@@ -12,7 +12,12 @@ class MyApp extends StatelessWidget {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text("Vinayak's App")
+            Text("What do you call a pencil with eraser on both ends?"),
+            Text("Pointless"),
+            Row(children: [
+              FloatingActionButton(onPressed: null),
+              FloatingActionButton(onPressed: null)
+            ])
           ], // children
         ) // Column
             ), // Center
