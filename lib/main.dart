@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
             Text("What do you call a pencil with eraser on both ends?"),
             Text("Pointless"),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              FloatingActionButton(onPressed: null),
+              FloatingActionButton(onPressed: null, child: Icon(Icons.arrow_left)),
               FloatingActionButton(onPressed: null)
             ])
           ], // children
