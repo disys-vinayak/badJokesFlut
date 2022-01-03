@@ -22,13 +22,21 @@ class MyApp extends StatelessWidget {
             Text(
               "Pointless",
               style: TextStyle(
-                fontSize: 27.5,
+                fontSize: 22.5,
               ),
               textAlign: TextAlign.center,
             ),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              FloatingActionButton(onPressed: null, child: Icon(Icons.arrow_left)),
-              FloatingActionButton(onPressed: null, child: Icon(Icons.arrow_right))
+              FloatingActionButton(
+                onPressed: null,
+                child: Icon(Icons.arrow_left, size: 50),
+                backgroundColor: Colors.orange,
+              ),
+              FloatingActionButton(
+                onPressed: null,
+                child: Icon(Icons.arrow_right, size: 50),
+                backgroundColor: Colors.orange,
+              )
             ])
           ], // children
         ) // Column
