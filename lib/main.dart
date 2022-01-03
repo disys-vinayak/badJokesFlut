@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
             Text("Pointless"),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               FloatingActionButton(onPressed: null, child: Icon(Icons.arrow_left)),
-              FloatingActionButton(onPressed: null)
+              FloatingActionButton(onPressed: null, child: Icon(Icons.arrow_right))
             ])
           ], // children
         ) // Column
