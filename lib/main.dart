@@ -34,6 +34,30 @@ class MyAppState extends State<MyApp> {
 
   var jokeIndex = 0;
 
+  changeJokeIndex(String direction) {
+    if (direction == "next") {
+      if (jokeIndex == jokes.length - 1) {
+        setState(() {
+          jokeIndex = 0;
+        });
+      } else {
+        setState(() {
+          jokeIndex++;
+        });
+      }
+    } else if (direction == "prev") {
+      if (jokeIndex == 0) {
+        setState(() {
+          jokeIndex = jokes.length - 1;
+        });
+      } else {
+        setState(() {
+          jokeIndex--;
+        });
+      }
+    }
+  }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -57,9 +81,7 @@ class MyAppState extends State<MyApp> {
                   margin: EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton(
                     onPressed: () {
-                      setState(() {
-                        jokeIndex--;
-                      });
+                      changeJokeIndex("prev");
                     },
                     child: Icon(Icons.arrow_left, size: 50),
                     backgroundColor: Colors.orange,
@@ -68,9 +90,7 @@ class MyAppState extends State<MyApp> {
                   margin: EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton(
                     onPressed: () {
-                      setState(() {
-                        jokeIndex++;
-                      });
+                      changeJokeIndex("next");
                     },
                     child: Icon(Icons.arrow_right, size: 50),
                     backgroundColor: Colors.orange,
