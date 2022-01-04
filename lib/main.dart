@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "./question.dart";
 
 void main() {
   runApp(MyApp());
@@ -40,16 +41,7 @@ class MyAppState extends State<MyApp> {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Container(
-                margin: EdgeInsets.all(25),
-                child: Text(
-                  jokes[jokeIndex]["question"],
-                  style: TextStyle(
-                    fontSize: 27.5,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.center,
-                )),
+            Question(question: jokes[jokeIndex]['question']),
             Container(
                 margin: EdgeInsets.fromLTRB(15, 5, 15, 45),
                 child: Text(
