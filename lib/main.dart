@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
                   textAlign: TextAlign.center,
                 )),
             Container(
-                margin: EdgeInsets.all(25),
+                margin: EdgeInsets.fromLTRB(15, 5, 15, 45),
                 child: Text(
                   "Pointless",
                   style: TextStyle(
