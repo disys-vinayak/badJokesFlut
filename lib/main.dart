@@ -5,6 +5,25 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  final jokes = [
+    {
+      "question": "What does a baby computer call its father?",
+      "answer": "Data"
+    },
+    {
+      "question": "What's a pencil with two erasers called?",
+      "answer": "Pointless"
+    },
+    {
+      "question": "Why is the calendar always scared?",
+      "answer": "Because it's days are numbered"
+    },
+    {
+      "question": "What do you call a fish with no eye",
+      "answer": "Fsh"
+    },
+  ];
+
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -15,7 +34,7 @@ class MyApp extends StatelessWidget {
             Container(
                 margin: EdgeInsets.all(25),
                 child: Text(
-                  "What do you call a pencil with eraser on both ends?",
+                  jokes[0]["question"],
                   style: TextStyle(
                     fontSize: 27.5,
                     fontWeight: FontWeight.bold,
@@ -25,7 +44,7 @@ class MyApp extends StatelessWidget {
             Container(
                 margin: EdgeInsets.fromLTRB(15, 5, 15, 45),
                 child: Text(
-                  "Pointless",
+                  jokes[0]["answer"],
                   style: TextStyle(
                     fontSize: 22.5,
                     fontWeight: FontWeight.normal,
