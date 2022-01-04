@@ -41,11 +41,12 @@ class MyApp extends StatelessWidget {
                     backgroundColor: Colors.orange,
                   )),
               Container(
+                  margin: EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton(
-                onPressed: null,
-                child: Icon(Icons.arrow_right, size: 50),
-                backgroundColor: Colors.orange,
-              ))
+                    onPressed: null,
+                    child: Icon(Icons.arrow_right, size: 50),
+                    backgroundColor: Colors.orange,
+                  ))
             ])
           ], // children
         ) // Column
