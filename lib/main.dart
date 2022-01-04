@@ -33,16 +33,19 @@ class MyApp extends StatelessWidget {
                   textAlign: TextAlign.center,
                 )),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              FloatingActionButton(
-                onPressed: null,
-                child: Icon(Icons.arrow_left, size: 50),
-                backgroundColor: Colors.orange,
-              ),
-              FloatingActionButton(
+              Container(
+                  margin: EdgeInsets.symmetric(horizontal: 15),
+                  child: FloatingActionButton(
+                    onPressed: null,
+                    child: Icon(Icons.arrow_left, size: 50),
+                    backgroundColor: Colors.orange,
+                  )),
+              Container(
+                  child: FloatingActionButton(
                 onPressed: null,
                 child: Icon(Icons.arrow_right, size: 50),
                 backgroundColor: Colors.orange,
-              )
+              ))
             ])
           ], // children
         ) // Column
