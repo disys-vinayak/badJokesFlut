@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "./question.dart";
 import "./answer.dart";
+import "./buttons.dart";
 
 void main() {
   runApp(MyApp());
@@ -68,26 +69,9 @@ class MyAppState extends State<MyApp> {
           children: <Widget>[
             Question(question: jokes[jokeIndex]['question']),
             Answer(answer: jokes[jokeIndex]['answer']),
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Container(
-                  margin: EdgeInsets.symmetric(horizontal: 15),
-                  child: FloatingActionButton(
-                    onPressed: () {
-                      changeJokeIndex("prev");
-                    },
-                    child: Icon(Icons.arrow_left, size: 50),
-                    backgroundColor: Colors.orange,
-                  )),
-              Container(
-                  margin: EdgeInsets.symmetric(horizontal: 15),
-                  child: FloatingActionButton(
-                    onPressed: () {
-                      changeJokeIndex("next");
-                    },
-                    child: Icon(Icons.arrow_right, size: 50),
-                    backgroundColor: Colors.orange,
-                  ))
-            ])
+            Buttons(
+              changeJokeIndex: changeJokeIndex,
+            )
           ], // children
         ) // Column
             ), // Center
