@@ -23,14 +23,15 @@ class MyApp extends StatelessWidget {
                   textAlign: TextAlign.center,
                 )),
             Container(
+                margin: EdgeInsets.all(25),
                 child: Text(
-              "Pointless",
-              style: TextStyle(
-                fontSize: 22.5,
-                fontWeight: FontWeight.normal,
-              ),
-              textAlign: TextAlign.center,
-            )),
+                  "Pointless",
+                  style: TextStyle(
+                    fontSize: 22.5,
+                    fontWeight: FontWeight.normal,
+                  ),
+                  textAlign: TextAlign.center,
+                )),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               FloatingActionButton(
                 onPressed: null,
