@@ -4,7 +4,14 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return MyAppState();
+  }
+}
+
+class MyAppState extends State<MyApp> {
   final jokes = [
     {
       "question": "What does a baby computer call its father?",
@@ -24,6 +31,8 @@ class MyApp extends StatelessWidget {
     },
   ];
 
+  var jokeIndex = 0;
+
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
@@ -34,7 +43,7 @@ class MyApp extends StatelessWidget {
             Container(
                 margin: EdgeInsets.all(25),
                 child: Text(
-                  jokes[0]["question"],
+                  jokes[jokeIndex]["question"],
                   style: TextStyle(
                     fontSize: 27.5,
                     fontWeight: FontWeight.bold,
@@ -44,7 +53,7 @@ class MyApp extends StatelessWidget {
             Container(
                 margin: EdgeInsets.fromLTRB(15, 5, 15, 45),
                 child: Text(
-                  jokes[0]["answer"],
+                  jokes[jokeIndex]["answer"],
                   style: TextStyle(
                     fontSize: 22.5,
                     fontWeight: FontWeight.normal,
@@ -55,14 +64,22 @@ class MyApp extends StatelessWidget {
               Container(
                   margin: EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton(
-                    onPressed: null,
+                    onPressed: () {
+                      setState(() {
+                        jokeIndex--;
+                      });
+                    },
                     child: Icon(Icons.arrow_left, size: 50),
                     backgroundColor: Colors.orange,
                   )),
               Container(
                   margin: EdgeInsets.symmetric(horizontal: 15),
                   child: FloatingActionButton(
-                    onPressed: null,
+                    onPressed: () {
+                      setState(() {
+                        jokeIndex++;
+                      });
+                    },
                     child: Icon(Icons.arrow_right, size: 50),
                     backgroundColor: Colors.orange,
                   ))
